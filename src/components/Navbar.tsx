@@ -36,7 +36,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="CareerLand Logo"
-            className="h-10 w-auto rounded-md object-contain"
+            className="h-20 w-auto rounded-md object-contain"
           />
 
         </a>
