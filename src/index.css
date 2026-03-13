@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    --primary: 174 62% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 28% 17%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 215 28% 17%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 174 62% 47%;
+
+    --radius: 0.75rem;
+
+    /* CareerLand custom tokens */
+    --hero-bg: 213 50% 13%;
+    --hero-overlay: 213 45% 18%;
+    --section-dark: 210 29% 15%;
+    --section-light: 210 20% 98%;
+    --cta-coral: 4 78% 63%;
+    --cta-coral-foreground: 0 0% 100%;
+    --navy: 213 50% 13%;
+    --navy-light: 213 40% 22%;
+    --teal: 174 62% 47%;
+    --teal-dark: 174 62% 40%;
+    --teal-glow: 174 80% 55%;
+    --gold: 45 93% 58%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply backdrop-blur-xl border border-white/10;
+    background: linear-gradient(135deg, hsla(0, 0%, 100%, 0.08), hsla(0, 0%, 100%, 0.02));
+  }
+  .glass-card-light {
+    @apply backdrop-blur-xl border border-border/50;
+    background: linear-gradient(135deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.7));
+    box-shadow: 0 8px 32px hsla(215, 28%, 17%, 0.06);
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--teal-glow)));
+  }
+  .btn-glow {
+    box-shadow: 0 0 20px hsla(174, 62%, 47%, 0.3), 0 0 60px hsla(174, 62%, 47%, 0.1);
+  }
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px hsla(215, 28%, 17%, 0.1);
+  }
+}
