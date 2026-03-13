@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoIcon from "@/assets/logo-icon.png";
+
+import logo from "@/assets/logo-careerland.jpeg"; // ← renamed & only one import
+
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -29,12 +31,17 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
-        {/* Logo placeholder — replace img src with your own logo later */}
-        <a href="#home" className="flex items-center gap-2.5 group">
-          <img src={logoIcon} alt="CareerLand" className="h-10 rounded-md" />
+
+        <a href="#home" className="flex items-center gap-2.5">
+          <img
+            src={logo}
+            alt="CareerLand Logo"
+            className="h-10 w-auto rounded-md object-contain"
+          />
+
         </a>
 
-        {/* Desktop links */}
+        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a
@@ -47,10 +54,10 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:block">
           <a
             href="#contact"
-            className="rounded-xl bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-teal-dark transition-all btn-glow hover:scale-105"
+            className="rounded-xl bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-teal-dark transition-all btn-glow hover:scale-105 active:scale-100"
           >
             Hire Us
           </a>
@@ -60,6 +67,7 @@ const Navbar = () => {
         <button
           className="md:hidden text-primary-foreground p-1"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -67,13 +75,13 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-navy/98 backdrop-blur-lg px-4 pb-6 space-y-1 border-t border-primary/10">
+        <div className="md:hidden bg-navy/98 backdrop-blur-lg px-4 pb-6 pt-2 space-y-1 border-t border-primary/10">
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block text-sm text-primary-foreground/80 hover:text-primary py-3 px-2 rounded-lg hover:bg-primary/5 transition-colors"
+              className="block text-sm text-primary-foreground/80 hover:text-primary py-3 px-3 rounded-lg hover:bg-primary/5 transition-colors"
             >
               {link.label}
             </a>
@@ -81,7 +89,7 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="block rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground text-center mt-3"
+            className="block rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground text-center mt-4 hover:bg-teal-dark btn-glow"
           >
             Hire Us
           </a>
