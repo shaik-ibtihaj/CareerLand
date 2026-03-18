@@ -58,41 +58,50 @@ const PartnerSection = () => {
             <p className="text-sm text-muted-foreground mb-8">
               Supercharge your hiring pipeline by tapping into a pool of motivated, industry-ready talent.
             </p>
-            <form className="space-y-5">
+            <form action="https://yourdomain.com/save_data.php" method="POST" className="space-y-5">
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="first_name"
                   placeholder="First Name"
+                  required
                   className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                 />
                 <input
                   type="text"
+                  name="last_name"
                   placeholder="Last Name"
+                  required
                   className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                 />
               </div>
               <input
                 type="email"
+                name="email"
                 placeholder="Work Email"
+                required
                 className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
               />
               <input
                 type="tel"
+                name="phone"
                 placeholder="Phone Number"
                 className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
               />
               <input
                 type="text"
+                name="company"
                 placeholder="Company / Organization"
                 className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
               />
               <textarea
+                name="message"
                 placeholder="Tell us about your talent needs..."
                 rows={4}
                 className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
               />
               <button
-                type="button"
+                type="submit"
                 className="w-full rounded-xl bg-coral py-4 text-sm font-bold text-coral-foreground hover:opacity-90 transition-all hover:shadow-lg hover:shadow-coral/20 active:scale-[0.98]"
               >
                 Schedule a Consultation
