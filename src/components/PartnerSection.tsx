@@ -50,63 +50,56 @@ const PartnerSection = () => {
             </div>
           </div>
 
-          {/* Right - Contact form (white) */}
-          <div id="contact" className="bg-card rounded-2xl p-8 lg:p-10 shadow-2xl shadow-navy/20">
-            <h3 className="text-2xl font-bold font-display text-card-foreground mb-2">
-              Let's Work Together
-            </h3>
-            <p className="text-sm text-muted-foreground mb-8">
-              Supercharge your hiring pipeline by tapping into a pool of motivated, industry-ready talent.
-            </p>
-            <form action="https://yourdomain.com/save_data.php" method="POST" className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="first_name"
-                  placeholder="First Name"
-                  required
-                  className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                />
-                <input
-                  type="text"
-                  name="last_name"
-                  placeholder="Last Name"
-                  required
-                  className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                />
+          {/* Right - Contact CTA (stylish card) */}
+          <div id="contact" className="bg-card rounded-2xl p-8 lg:p-10 shadow-2xl shadow-navy/20 flex flex-col justify-center">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/20 to-coral/20 flex items-center justify-center">
+                <Mail size={28} className="text-primary" />
               </div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Work Email"
-                required
-                className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-              />
-              <input
-                type="text"
-                name="company"
-                placeholder="Company / Organization"
-                className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-              />
-              <textarea
-                name="message"
-                placeholder="Tell us about your talent needs..."
-                rows={4}
-                className="w-full rounded-xl bg-section-light border border-border px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
-              />
-              <button
-                type="submit"
-                className="w-full rounded-xl bg-coral py-4 text-sm font-bold text-coral-foreground hover:opacity-90 transition-all hover:shadow-lg hover:shadow-coral/20 active:scale-[0.98]"
+              
+              <h3 className="text-2xl md:text-3xl font-bold font-display text-card-foreground mb-4">
+                Get in Touch
+              </h3>
+              <p className="text-muted-foreground mb-8 max-w-sm mx-auto leading-relaxed">
+                Ready to supercharge your hiring pipeline? Connect with us to access a pool of motivated, industry-ready talent.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3 justify-center text-sm text-muted-foreground">
+                  <div className="w-2 h-2 rounded-full bg-coral" />
+                  <span>Internship Partnerships</span>
+                </div>
+                <div className="flex items-center gap-3 justify-center text-sm text-muted-foreground">
+                  <div className="w-2 h-2 rounded-full bg-coral" />
+                  <span>Talent Recruitment Solutions</span>
+                </div>
+                <div className="flex items-center gap-3 justify-center text-sm text-muted-foreground">
+                  <div className="w-2 h-2 rounded-full bg-coral" />
+                  <span>Industry Collaboration Programs</span>
+                </div>
+              </div>
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSePElIm1P-n6XiwrT_zBW7D7IZ3uwnFbN2dYqjhmrIophPXsQ/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-gradient-to-r from-coral to-coral/90 py-4 px-6 text-sm font-bold text-coral-foreground hover:opacity-90 transition-all hover:shadow-lg hover:shadow-coral/20 active:scale-[0.98] group"
               >
-                Schedule a Consultation
-              </button>
-            </form>
+                <span>Fill Contact Form</span>
+                <svg 
+                  className="w-4 h-4 transition-transform group-hover:translate-x-1" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              
+              <p className="mt-4 text-xs text-muted-foreground/60">
+                Opens Google Form in a new tab
+              </p>
+            </div>
           </div>
         </div>
       </div>
